@@ -1080,7 +1080,7 @@
     <p>All prices are starting rates. Contact us for a custom quote tailored to your project. Rush delivery available.</p>
     <a href="#" onclick="openModal(event)" class="btn-primary" style="font-size:1rem;padding:1.1rem 3rem;">Contact Us Today</a>
     <div class="contact-info">
-      <div class="contact-item">📧 <a href="/cdn-cgi/l/email-protection#422731363b2d30232a022b212e2d37266c212d2f"><span class="__cf_email__" data-cfemail="f1948285889e839099b198929d9e8495df929e9c">[email&#160;protected]</span></a></div>
+      <div class="contact-item">📧 <a href="mailto:estyh@exclusivedev.com">info@exclusivedev.com</a></div>
       <div class="contact-item">📞 <a href="tel:9292895181">(929) 289-5181</a></div>
       <div class="contact-item">📍 New York City, NY</div>
     </div>
@@ -1095,8 +1095,8 @@
     <h3>Let's talk about<br><em>your project</em></h3>
     <p>Free consultation · Custom quotes · Rush delivery available.<br>Reach us whichever way you prefer.</p>
     <div class="modal-actions">
-      <a href="/cdn-cgi/l/email-protection#ee8b9d9a97819c8f86ae878d82819b8ac08d8183d19d9b8c848b8d9ad3a89c8b8bcbdcdead81809d9b829a8f9a878180cbdcdebc8b9f9b8b9d9a" class="modal-btn-email">
-        📧 Email Us — <span class="__cf_email__" data-cfemail="492c3a3d30263b282109202a25263c2d672a2624">[email&#160;protected]</span>
+      <a href="mailto:esty@exclusivedev.com?subject=Free%20Consultation%20Request" class="modal-btn-email">
+        📧 Email Us — esty@exclusivedev.com
       </a>
       <div class="modal-divider">or</div>
       <a href="tel:9292895181" class="modal-btn-phone">
@@ -1112,7 +1112,7 @@
   <div class="footer-copy">© 2026 ExclusiveDev™ · New York City · Affordable Web Design & Digital Marketing</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function showTab(name) {
     document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.pricing-tab').forEach(t => t.classList.remove('active'));
@@ -1123,4 +1123,22 @@
   function openModal(e) {
     e.preventDefault();
     document.getElementById('contactModal').classList.add('open');
-    document.body
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('contactModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('contactModal')) closeModal();
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+<script src="https://chat.exclusivedev.com/api/widget/e419e64e-0f30-4531-a37c-fac5a3e5fda7" async></script>
+</body>
+</html>
